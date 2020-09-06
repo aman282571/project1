@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style1.css">
+   <link rel="stylesheet" href="./nodeproject/all.css">
+</head>
+<body>
+   
+    <h1 id="d1">MATCH ITEM</h1><br>
+    <input type="text" placeholder="Search here" id="item">
+   <!-- <h2 id="d2">ADD NAME   <input type="text" placeholder="Add Name" id="item1"> -->
+    
+    </h2>
+    
+
+    <ul id="ul1">
+        <li><h1 class="cls1">A</h1></li>
+        <li class="cls2">Aman </li>
+        <li class="cls2">Amit </li>
+        <li class="cls2">Ankush </li>
+        <li class="cls2">Aakash </li>
+        <li><h1 class="cls1">B</h1></li>
+        <li class="cls2">Bharat </li>
+        <li class="cls2">Bhanu </li>
+        <li class="cls2">Bhaskar </li>
+        <li class="cls2">Bhvya </li>
+        <li><h1 class="cls1">C</h1></li>
+        <li class="cls2">Chandan </li>
+        <li class="cls2">Chaya</li>
+        <li class="cls2">Chachu </li>
+        <li class="cls2">Chankya </li>
+        <li><h1 class="cls1">D</h1></li>
+        <li class="cls2">Deepak </li>
+        <li class="cls2">Divansh </li>
+        <li class="cls2">Divanshu </li>
+        <li class="cls2">Deepanshu </li>
+
+
+
+
+
+
+    </ul>
+</body>
+<script >  
+   
+ btn= document.getElementById("item");
+ btn.addEventListener("keyup",fn1);
+ function fn1()
+ {   b = document.getElementsByClassName("cls2");
+     Array.from(b).forEach( function (a){
+         if(a.textContent.toLowerCase().indexOf(btn.value.toLowerCase())!= -1)
+         {
+                a.style.visibility="visible";
+         }
+         else{
+             a.style.visibility="hidden";
+         }
+     })
+     
+ }
+
+ item1=document.getElementById("item1")
+ item1.addEventListener("keyup")
+ newele=document.createElement("li");
+ newele.class="cls2"
+ newtxt=document.createTextNode(item1.value)
+
+
+
+
+
+</script>
+</html>
